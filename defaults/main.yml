@@ -1,0 +1,5 @@
+---
+# defaults file for roles
+web: apache2
+db: mariadb-server
+db_svc: mysql

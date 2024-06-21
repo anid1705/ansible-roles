@@ -1,0 +1,15 @@
+- name: install php modules
+  apt:
+    name: php
+    state: present
+- name: install other php modules
+  apt:
+    name: "{{item}}"
+    state: present
+  loop:
+    - php-cli
+    - php-mysql
+    - php-gd
+    - php-xml
+    - php-mbstring
+  notify: restart apache
